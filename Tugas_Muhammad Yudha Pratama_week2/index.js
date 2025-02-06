@@ -24,7 +24,7 @@ const readNote = () => {
 }
 
 const updateNote = (id, NHead, NDesc) => {
-  const Index = notes.findI(note => note.id === id);
+  const Index = notes.findIndex(note => note.id === id);
   if (Index !== -1) {
     notes[Index].heading = NHead;
     notes[Index].description = NDesc;
@@ -34,7 +34,7 @@ const updateNote = (id, NHead, NDesc) => {
 }
 
 const deleteNote = (id) => {
-  const Index = notes.findI(note => note.id === id);
+  const Index = notes.findIndex(note => note.id === id);
   if (Index !== -1) {
     notes.splice(Index, 1);
   } else {
